@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Códigos QR</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- QRCode.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    <style>
+        body {
+            background-color: #f1f5f9;
+            font-family: Arial, sans-serif;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: #1e40af;
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: #e2e8f0;
+            color: #1e293b;
+        }
+
+        .btn svg {
+            margin-right: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container max-w-5xl px-4 py-10 mx-auto">
+        <h1 class="mb-10 text-3xl font-bold text-center">Generador de Códigos QR</h1>
+
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <!-- Formulario -->
+            <div>
+                <h2 class="mb-4 text-xl font-semibold">Configuración del QR</h2>
+
+                <div class="mb-4">
+                    <label class="block mb-1 text-sm font-medium">URL o texto para el QR</label>
+                    <input id="qr-value" type="text" class="input-field" value="https://ejemplo.com">
+                    <p class="mt-1 text-sm text-gray-600">
+                        Para enlaces de WhatsApp, puedes generarlos en
+                        <a href="https://crear.wa.link/" target="_blank"
+                            class="text-blue-600 hover:underline">crear.wa.link</a>
+                    </p>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block mb-1 text-sm font-medium">Nombre del archivo</label>
+                    <input id="file-name" type="text" class="input-field" value="mi-codigo-qr">
+                </div>
+
+                <div class="mb-4">
+                    <label class="block mb-1 text-sm font-medium">Tamaño (formato: ancho x alto)</label>
+                    <input id="size" type="text" class="input-field" value="600x600">
+                </div>
+
+                <div class="mb-4">
+                    <label class="block mb-1 text-sm font-medium">Logo (opcional)</label>
+                    <input id="logo" type="file" class="input-field" accept="image/*">
+                </div>
+            </div>
+
+            <!-- Previsualización -->
+            <div>
+                <h2 class="mb-4 text-xl font-semibold">Previsualización</h2>
+                <div id="qr-preview" class="flex items-center justify-center p-4 mb-4 bg-white rounded-md shadow-sm"
+                    style="height: 400px; width: 400px; margin: 0 auto;">
+                    <!-- QR code will be inserted here -->
+                </div>
+
+                <div class="relative flex items-center justify-center gap-4 top-2">
+                    <button id="download-btn" class="btn btn-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                        Descargar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
