@@ -28,7 +28,7 @@ Una aplicación web simple y eficiente para generar códigos QR personalizados c
 
 1. Clona este repositorio:
 ```bash
-git clone [[URL del repositorio](https://github.com/Minijuegosz1531/qr_js_ldm)]
+git clone https://github.com/Minijuegosz1531/qr_js_ldm
 ```
 
 2. Abre el archivo `index.html` en tu navegador web
@@ -80,6 +80,6 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 
 ## Contacto
 
-[Tu Nombre] - [Tu Email]
+[Jonathan Brand Garcia] - [desarrollo@losdemarketing.com]
 
 Link del Proyecto: [URL del repositorio] 
